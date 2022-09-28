@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Parallax Website";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/style.css" rel="stylesheet" />
+</head>
+<body>
+    <section>
+
+        <img src="~/bg.jpg" id="bg" />
+        <img src="~/moon.png" id="moon" />
+        <img src="~/mountain.png" id="mountain" />
+        <img src="~/road.png" id="road" />
+        <h2 id="text">Moon Light</h2>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+        window.addEventListener('scroll', function () {
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 + 'px';
+            moon.style.left = -value * 0.5 + 'px';
+            mountain.style.top = -value * 0.15 + 'px';
+            road.style.top = value * 0.15 + 'px';
+            text.style.top = value * 1 + 'px';
+        })
+    </script>
+    <section>
+
+        <img src="~/bg1.jpg" id="bg1" />
+        <img src="~/sun.png" id="sun" />
+        <img src="~/mountain1.png" id="mountain1" />
+        <img src="~/road.png" id="road1" />
+        <h2 id="text1">Sun Light</h2>
+    </section>
+    <script type="text/javascript">
+        let bg1 = document.getElementById("bg1");
+        let sun = document.getElementById("sun");
+        let mountain1 = document.getElementById("mountain1");
+        let road1 = document.getElementById("road1");
+        let text1 = document.getElementById("text1");
+
+        window.addEventListener('scroll', function () {
+            var value1 = window.scrollY;
+            bg1.style.top = value1 * 0.01 + 'px';
+            sun.style.left = -value1 * 0.5 + 'px';
+            mountain1.style.top = -value1 * 0.05 + 'px';
+            road1.style.top = value1 * 0.08 + 'px';
+            text1.style.top = value1 * 0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
+
